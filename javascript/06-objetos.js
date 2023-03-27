@@ -78,3 +78,111 @@ function verificarPropiedad(obj, propiedad) {
   }
   
 console.log(verificarPropiedad(miCuaderno, "color"));
+
+// *******************
+//Objetos complejos en JavaScript. 
+
+var ordenesDePizzas = [
+  {
+    "tipo": "margarita",
+    "tamaño": "individual",
+    "precio": 5.67,
+    "toppings": [
+        "extra queso",
+        "champiñones",
+        "piña"
+    ],
+    "paraLlevar": true
+  },
+  {
+    "tipo": "cuatro quesos",
+    "tamaño": "familiar",
+    "precio": 18.34,
+    "toppings": [
+        "extra queso",
+        "pimentón"
+    ],
+    "paraLlevar": false
+  }
+];
+
+console.log(ordenesDePizzas[0]);
+console.log(ordenesDePizzas[1]);
+
+console.log(ordenesDePizzas[0].tipo);
+console.log(ordenesDePizzas[0]["tipo"]);
+
+console.log(ordenesDePizzas[0].precio);
+console.log(ordenesDePizzas[0]["precio"]);
+
+
+//*************
+//Objetos anidados.
+console.log("******************");
+var miReceta = {
+  "descripcion": "mi postre favorito",
+  "costo": 15.6,
+  "ingredientes": {
+    "masa": {
+      "harina": "100 grs",
+      "sal": "1 cucharadita",
+      "agua": "1 taza"
+    },
+    "cobertura": {
+      "azucar": "120 grs",
+      "chocolate": "4 cucharadas",
+      "mantequilla": "200 grs"
+    }
+  }
+};
+
+console.log(miReceta.descripcion);
+console.log(miReceta.costo);
+console.log(miReceta.ingredientes);
+
+console.log(miReceta.ingredientes.masa);
+
+console.log(miReceta.ingredientes.masa.harina);
+console.log(miReceta.ingredientes.masa.sal);
+console.log(miReceta.ingredientes.masa.agua);
+
+console.log(miReceta.ingredientes.masa["harina"]);
+console.log(miReceta.ingredientes.masa["sal"]);
+console.log(miReceta.ingredientes.masa["agua"]);
+
+console.log(miReceta.ingredientes.cobertura);
+
+console.log(miReceta.ingredientes.cobertura.azucar);
+console.log(miReceta.ingredientes.cobertura.chocolate);
+console.log(miReceta.ingredientes.cobertura.mantequilla);
+
+
+
+//***************
+// Arreglos anidados.
+
+
+var misPlantas = [
+  {
+    tipo: "flores",
+    lista: [
+      "rosas",
+      "tulipanes",
+      "dientes de león"
+    ]
+  },
+  {
+    tipo: "árboles",
+    lista: [
+      "abeto",
+      "pino",
+      "abedul"
+    ]
+  }
+];
+
+var primeraFlor = misPlantas[0].lista[0];
+console.log(primeraFlor);
+
+var segundoArbol = misPlantas[1].lista[1];
+console.log(segundoArbol);
